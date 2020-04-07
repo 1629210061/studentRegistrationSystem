@@ -1,0 +1,5 @@
+/* pages/wall/wall.wxss */
+.cu-card{
+  background-color: white;
+  margin-bottom: 10px;
+}

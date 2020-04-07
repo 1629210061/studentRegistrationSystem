@@ -1,0 +1,17 @@
+/* pages/home/schoolIntroduce/article/article.wxss */
+.container{
+  background-color: white;
+}
+
+.title{
+  padding-left: 30px!important;
+}
+
+.content{
+  padding: 0 30px;
+}
+
+.content text{
+  font-size: 16px;
+  line-height: 26px;
+}

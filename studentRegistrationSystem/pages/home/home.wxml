@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+
+
+
+
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">首页</view>
+</cu-custom>
+
+<!-- 主体内容 -->
+<view class="container">
+  <!-- 卡片式轮播图 -->
+  <swiper class="swiper" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+  <view class="icon-box">
+    <block wx:for="{{iconList}}">
+      <view class="icon-item" bindtap="gotoJump" data-id="{{item.id}}">
+        <image src="{{item.url}}"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+
+</view>

@@ -1,0 +1,32 @@
+/* pages/student/schoolInfo/schoolInfo.wxss */
+
+.container{
+  height: 100%;
+  background-color: white;
+}
+.school-info{
+  padding: 10px 15px;
+}
+.school-item{
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #edf0f1;
+}
+.school-item text{
+  font-size: 16px;
+  color: #898e91;
+}
+.school-item [class^='cuIcon-']{
+  font-size: 18px;
+  margin-right: 5px;
+  color: black!important;
+}
+.school-item .title{
+  color: black;
+}
+
+.school-item text:nth-child(3){
+  float: right;
+  margin-right: 5px;
+}
+

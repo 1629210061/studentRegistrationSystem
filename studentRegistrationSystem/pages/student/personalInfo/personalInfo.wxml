@@ -1,0 +1,49 @@
+<!--pages/student/personalInfo/personalInfo.wxml-->
+
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">个人信息</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+
+<view class="container">
+  <view class="personal-info">
+    <view class="personal-item">
+      <text class="iconfont iconnamecard"></text>
+      <text class="title">真实姓名</text>
+      <text>台州学院</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconaccount-fill"></text>
+      <text class="title">性别</text>
+      <text>女</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconproduct1"></text>
+      <text class="title">年龄</text>
+      <text>女</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconcreditcard"></text>
+      <text class="title">学号</text>
+      <text>台州学院</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconmap1"></text>
+      <text class="title">籍贯</text>
+      <text>台州学院</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconmap1"></text>
+      <text class="title">寝室</text>
+      <text>台州学院</text>
+    </view>
+    <view class="personal-item">
+      <text class="iconfont iconphone1"></text>
+      <text class="title">手机号</text>
+      <text>台州学院</text>
+    </view>
+
+  </view>
+</view>

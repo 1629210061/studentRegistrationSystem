@@ -1,0 +1,42 @@
+<!--pages/student/schoolInfo/schoolInfo.wxml-->
+
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">学校信息</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="school-info">
+    <view class="school-item">
+      <text class="cuIcon-home"></text>
+      <text class="title">学校</text>
+      <text>台州学院</text>
+    </view>
+    <view class="school-item">
+      <text class="cuIcon-cascades"></text>
+      <text class="title">学院</text>
+      <text>台州学院</text>
+    </view>
+    <view class="school-item">
+      <text class="cuIcon-qrcode"></text>
+      <text class="title">专业</text>
+      <text>台州学院</text>
+    </view>
+    <view class="school-item">
+      <text class="cuIcon-form"></text>
+      <text class="title">班级</text>
+      <text>台州学院</text>
+    </view>
+    <view class="school-item">
+      <text class="cuIcon-people"></text>
+      <text class="title">辅导员</text>
+      <text>台州学院</text>
+    </view>
+    <view class="school-item">
+      <text class="cuIcon-peoplelist"></text>
+      <text class="title">班主任</text>
+      <text>台州学院</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/student/about/about.wxml-->
+
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">我的</view>
+  <view slot="backText">返回</view>
+</cu-custom>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "home":"/pages/home/home",
+    "student":"/pages/student/student",
+    "wall":"/pages/wall/wall"
+  }
+}

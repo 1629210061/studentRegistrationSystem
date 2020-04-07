@@ -1,0 +1,33 @@
+/* pages/student/personalInfo/personalInfo.wxss */
+
+.container{
+  height: 100%;
+  background-color: white;
+}
+.personal-info{
+  padding: 10px 15px;
+}
+.personal-item{
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #edf0f1;
+}
+.personal-item text{
+
+  font-size: 16px;
+  color: #898e91;
+}
+.personal-item .iconfont{
+  font-size: 18px;
+  margin-right: 5px;
+  color: black!important;
+}
+.personal-item .title{
+  color: black;
+}
+
+.personal-item text:nth-child(3){
+  float: right;
+  margin-right: 5px;
+}
+

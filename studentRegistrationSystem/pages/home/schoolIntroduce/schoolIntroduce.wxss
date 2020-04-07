@@ -1,0 +1,47 @@
+/* pages/home/schoolIntroduce/schoolIntroduce.wxss */
+
+.container {
+  background-color: white;
+}
+
+/* 头部背景图片 */
+
+.head {
+  width: 100%;
+  height: 200px;
+}
+
+.head image {
+  width: 100%;
+  height: 200px;
+}
+
+/* 模块盒子 */
+
+.module {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  height: 400px;
+  padding: 60px 5px;
+}
+
+.module-item {
+  height: 110px;
+  text-align: center;
+  width: 45%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.module-item text {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 30px;
+  line-height: 30px;
+}

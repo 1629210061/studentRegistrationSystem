@@ -1,0 +1,57 @@
+/* pages/student/student.wxss */
+
+.head{
+  /* background: url('http://pic1.win4000.com/wallpaper/2019-01-05/5c305da756b99.jpg') no-repeat;
+  background-size: cover; */
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.info-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-box image{
+  width: 64px;
+  height: 64px;
+  border-radius: 30px;
+}
+.info-box text{
+  font-size: 20px;
+  color:  #8799a3;
+  margin-top: 10px;
+}
+
+
+/* card功能块 */
+.card-list{
+  width: 100%;
+  background-color: white;
+  padding: 0px 20px;
+}
+
+.card-item{
+  height: 45px;
+  line-height: 45px;
+  
+}
+
+.card-item text{
+  font-size: 15px;
+  color: #8799a3;
+}
+
+[class^='cuIcon-']{
+  font-size: 18px!important;
+  margin-right: 5px;
+}
+.card-item .cuIcon-right{
+  float: right;
+}

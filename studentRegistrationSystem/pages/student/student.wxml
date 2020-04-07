@@ -1,0 +1,33 @@
+<!--pages/student/student.wxml-->
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink">
+  <view slot="content">我的</view>
+</cu-custom>
+
+<view class="container">
+  <!-- 头部信息框 -->
+  <view class="head">
+    <view class="info-box">
+      <image src='{{userInfo.avatarUrl}}'></image>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="card-list">
+    <view class="card-item" bindtap="gotojump" data-route="/pages/student/schoolInfo/schoolInfo">
+      <text class="cuIcon-shopfill"></text>
+      <text>校园信息</text>
+      <text class="cuIcon-right"></text>
+    </view>
+    <view class="card-item" bindtap="gotojump" data-route="/pages/student/personalInfo/personalInfo">
+      <text class="cuIcon-peoplefill"></text>
+      <text>我的个人信息</text>
+      <text class="cuIcon-right"></text>
+    </view>
+    <view class="card-item" bindtap="gotojump" data-route="/pages/student/about/about">
+      <text class="cuIcon-settingsfill"></text>
+      <text>关于软件</text>
+      <text class="cuIcon-right"></text>
+
+    </view>
+  </view>
+</view>

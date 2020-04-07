@@ -1,0 +1,45 @@
+/* pages/home/home.wxss */
+
+/* 轮播图模块 */
+
+.swiper {
+  background-color: white;
+  height: 220px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.swiper image {
+  height: 200px;
+  width: 95%;
+  border-radius: 10px;
+}
+
+/* icon */
+
+.icon-box {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-item image {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+}
+
+.icon-box text {
+  color: #8799a3;
+}

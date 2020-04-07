@@ -1,0 +1,19 @@
+<!--pages/home/schoolIntroduce/schoolIntroduce.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">学校概况</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="head">
+    <image src="http://img3.imgtn.bdimg.com/it/u=3620654327,2552867240&fm=26&gp=0.jpg"></image>
+  </view>
+  <view class="module">
+    <block wx:for="{{moduleList}}" wx:key>
+      <view class="module-item" style="background:url({{item.image}});background-size: cover;" bindtap="gotoJump" data-id="{{item.id}}">
+        <text>{{item.title}}</text>
+      </view>
+    </block>
+
+  </view>
+</view>

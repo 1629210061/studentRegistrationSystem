@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/student/student",
+    "pages/wall/wall",
+    "pages/student/schoolInfo/schoolInfo",
+    "pages/student/personalInfo/personalInfo",
+    "pages/student/about/about",
+    "pages/home/guide/guide",
+    "pages/home/schoolIntroduce/schoolIntroduce",
+    "pages/home/question/question",
+    "pages/home/register/register",
+    "pages/home/schoolIntroduce/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
