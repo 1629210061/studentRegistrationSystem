@@ -1,0 +1,26 @@
+<!--pages/home/schoolIntroduce/campusScenery/campusScenery.wxml-->
+
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">校园风光</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="image-box">
+    <view class="image-item" bindtap="previewImage">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg"></image>
+    </view>
+    <view class="image-item">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg"></image>
+    </view>
+     <view class="image-item">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg"></image>
+    </view>
+     <view class="image-item">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg"></image>
+    </view>
+     <view class="image-item">
+      <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg"></image>
+    </view>
+  </view>
+</view>

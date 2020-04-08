@@ -1,0 +1,12 @@
+/* pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce.wxss */
+
+.article{
+  background: white;
+  margin-top: 10px;
+}
+
+.article .content{
+  padding: 10px 20px;
+  line-height: 26px;
+  font-size: 15px;
+}

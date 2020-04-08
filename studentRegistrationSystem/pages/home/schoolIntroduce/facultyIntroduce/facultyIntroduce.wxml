@@ -1,0 +1,60 @@
+<!--pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce.wxml-->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">学院介绍</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+<view class="container">
+  <!-- 头部搜索框 -->
+  <view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search" bindblur="search"></input>
+    </view>
+    <view class="action">
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{facultyList}}">
+          <view class="picker">
+            {{facultyList[index]}}
+          </view>
+        </picker>
+      </view>
+      <text class="cuIcon-triangledownfill"></text>
+    </view>
+  </view>
+  <!-- 文章部分 -->
+  <view class="article">
+    <!-- 头部标题 -->
+    <view class="header">
+      <view class="cu-bar bg-white">
+        <view class="action border-title">
+          <text class="text-xl text-bold"> {{facultyList[index]}}</text>
+          <text class="bg-grey" style="width:2rem"></text>
+        </view>
+      </view>
+    </view>
+    <view class="content">
+      <text class="text-gray"> [BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
+textarea层级太高的问题？
+textarea三星S6 调用完成一行背景只显示一半
+小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
+在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
+textarea层级太高的问题？
+textarea三星S6 调用完成一行背景只显示一半
+小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
+在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
+textarea层级太高的问题？
+textarea三星S6 调用完成一行背景只显示一半
+小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
+在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
+textarea层级太高的问题？
+textarea三星S6 调用完成一行背景只显示一半
+小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
+在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
+textarea层级太高的问题？
+textarea三星S6 调用完成一行背景只显示一半
+小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
+在ios机上，textarea组件点击聚焦后光标自动往上移？
+    </text>
+    </view>
+  </view>
+</view>

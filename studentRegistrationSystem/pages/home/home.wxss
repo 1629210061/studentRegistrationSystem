@@ -43,3 +43,23 @@
 .icon-box text {
   color: #8799a3;
 }
+
+
+/* 学校新闻 */
+.cu-card>.cu-item {
+  margin: 0px!important;
+  border-radius: 0rpx!important;
+
+}
+
+.text-content{
+  height: 6em!important;
+}
+
+.newsList{
+  margin-top: 10px;
+}
+
+.new-title{
+  border-bottom: 1px solid #eee;
+}

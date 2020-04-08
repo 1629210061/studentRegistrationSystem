@@ -1,1 +1,41 @@
 /* pages/home/register/register.wxss */
+
+/* 预报到方式 */
+
+/* 单选框样式调整 */
+
+radio .wx-radio-input, radio .wx-radio-input.wx-radio-input-checked,
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.wx-radio-input.wx-radio-input-checked::before {
+  font-size: 30rpx;
+}
+
+radio::before, checkbox::before {
+  right: 1px !important;
+}
+
+.register-mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: white;
+  padding: 0 10px 0 20px;
+}
+.register-mode text{
+  font-size: 16px;
+}
+
+
+.radio{
+  padding-right: 10px;
+  color:  #898e91;
+}
+
+.radio radio{
+  margin-right: 5px;
+}

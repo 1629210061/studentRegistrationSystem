@@ -20,14 +20,15 @@ Page({
         id:2,
         title: '学院介绍',
         image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2543597163,1350397026&fm=26&gp=0.jpg',
-        route: ''
+        route: '/pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce'
       },
       {
         id:3,
         title: '校园风光',
         image: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4259868233,1922299853&fm=26&gp=0.jpg',
-        route: ''
+        route: '/pages/home/schoolIntroduce/campusScenery/campusScenery'
       },
+
     ]
   },
 

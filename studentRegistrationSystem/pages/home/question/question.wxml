@@ -1,2 +1,34 @@
 <!--pages/home/question/question.wxml-->
-<text>pages/home/question/question.wxml</text>
+
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">问题咨询</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <scroll-view scroll-y="true" class="question-box">
+    <view class="question-item" bindtap="showModal" data-target="Modal">
+      <text class="cuIcon-title"></text>
+      <text>问题1</text>
+    </view>  
+  </scroll-view>
+  <view class="service">
+    <text class="cuIcon-service"></text>
+    <text>人工客服</text>
+  </view>
+</view>
+
+<!-- 问题回答模态框 -->
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">Modal标题</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      Modal 内容。
+    </view>
+  </view>
+</view>

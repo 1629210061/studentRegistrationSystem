@@ -1,0 +1,26 @@
+/* pages/home/schoolIntroduce/campusScenery/campusScenery.wxss */
+
+.container {
+  background-color: white;
+}
+
+.image-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 20px 5px 5px;
+}
+
+.image-item {
+  /* border: 5px solid rgb(247, 245, 245); */
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.6);
+  width: 45%;
+  margin-bottom: 15px;
+}
+
+.image-item image {
+  height: 100px;
+  width: 100%;
+}
+

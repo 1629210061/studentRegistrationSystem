@@ -1,1 +1,44 @@
 /* pages/home/question/question.wxss */
+
+.container{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 91%;
+  width: 100%;
+}
+
+/* 问题模块 */
+.question-box{
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  height: 92%;
+}
+
+.question-box .question-item{
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 底部人工客服按钮 */
+.service{
+  height: 8%;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px -1px 5px 5px rgba(177, 173, 173, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service text {
+  font-size: 16px;
+}
+
+[class^="cuIcon-"]{
+  margin-right: 5px;
+}

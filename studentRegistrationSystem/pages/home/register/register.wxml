@@ -1,2 +1,22 @@
 <!--pages/home/register/register.wxml-->
-<text>pages/home/register/register.wxml</text>
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">报到注册</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="register-mode">
+    <text>预报到:</text>
+    <radio-group class="radio-group" bindchange="chooseMode">
+      <label class="radio" wx:for="{{modeList}}">
+        <radio class="text-gary" value="{{item.id}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<view class="form-box">
+  <view class="traffic">
+    <text></text>
+  </view>
+</view>

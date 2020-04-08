@@ -11,7 +11,9 @@
     "pages/home/schoolIntroduce/schoolIntroduce",
     "pages/home/question/question",
     "pages/home/register/register",
-    "pages/home/schoolIntroduce/article/article"
+    "pages/home/schoolIntroduce/article/article",
+    "pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce",
+    "pages/home/schoolIntroduce/campusScenery/campusScenery"
   ],
   "window": {
     "backgroundTextStyle": "light",
