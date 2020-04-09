@@ -26,16 +26,57 @@ radio::before, checkbox::before {
   background-color: white;
   padding: 0 10px 0 20px;
 }
-.register-mode text{
+
+.register-mode text {
   font-size: 16px;
 }
 
-
-.radio{
+.radio {
   padding-right: 10px;
-  color:  #898e91;
 }
 
-.radio radio{
+.radio radio {
   margin-right: 5px;
 }
+
+/* 表单 */
+
+input {
+  text-align: right;
+  color: var(--grey) !important;
+}
+
+.reason .title {
+  background-color: var(--white);
+  padding: 1rpx 30rpx;
+  min-height: 100rpx;
+  text-align: justify;
+  padding-right: 30rpx;
+  font-size: 30rpx;
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top: 1rpx solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.cu-form-group textarea{
+  margin-top: 0px!important;
+}
+
+/* 按钮 */
+.btn-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding-top: 15px;
+}
+button:not([size='mini']){
+  width: 100px!important;
+}
+.btn{
+  margin-right:20px;
+}
+

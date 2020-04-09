@@ -7,16 +7,117 @@
 <view class="container">
   <view class="register-mode">
     <text>预报到:</text>
-    <radio-group class="radio-group" bindchange="chooseMode">
+    <radio-group class="radio-group text-grey" bindchange="chooseMode">
       <label class="radio" wx:for="{{modeList}}">
         <radio class="text-gary" value="{{item.id}}" checked="{{item.checked}}" />{{item.value}}
       </label>
     </radio-group>
   </view>
 </view>
-
-<view class="form-box">
-  <view class="traffic">
-    <text></text>
+<!-- 表单 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="cu-form-group margin-top">
+    <view class="title">姓名</view>
+    <input placeholder="姓名" model:value="{{name}}"></input>
   </view>
-</view>
+  <view class="cu-form-group">
+    <view class="title">学号</view>
+    <input placeholder="学号" model:value="{{studentId}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">学院</view>
+    <input placeholder="姓名" model:value="{{faculty}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">班级</view>
+    <input placeholder="姓名" model:value="{{class}}"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">手机号</view>
+    <input placeholder="姓名" model:value="{{phone}}"></input>
+  </view>
+  <!-- 按时报到 -->
+  <block wx:if="{{modeIndex==0}}">
+    <view class="cu-form-group">
+      <view class="title">交通工具</view>
+      <picker bindchange="trafficChange" value="{{trafficIndex}}" range="{{trafficList}}">
+        <view class="picker text-grey">
+          {{trafficList[trafficIndex]}}
+        </view>
+      </picker>
+    </view>
+    <block wx:if="{{trafficIndex==0||trafficIndex==1}}">
+      <view class="cu-form-group">
+        <view class="title">班次（车号或航班号）</view>
+        <input placeholder="请输入班次..." model:value="{{trafficNumber}}"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">预计到达时间</view>
+        <picker mode="date" value="{{arriveTime}}" start="2019-09-01" end="2020-10-10" bindchange="dateChange">
+          <view class="picker">
+            {{arriveTime}}
+          </view>
+        </picker>
+      </view>
+    </block>
+    <view class="cu-form-group">
+      <view class="title">是否需要住宿</view>
+      <radio-group class="radio-group text-grey" bindchange="isAccommodation">
+        <label class="radio">
+          <radio value="true" />是
+          <radio value="false" checked="true" />否
+        </label>
+      </radio-group>
+    </view>
+    <block wx:if="{{isShow}}">
+      <view class="cu-form-group">
+        <view class="title">需要房间数</view>
+        <input placeholder="姓名" model:value="{{roomNumber}}"></input>
+      </view>
+    </block>
+  </block>
+  <!-- 请假 -->
+  <block wx:elif="{{modeIndex==1}}">
+    <view class="cu-form-group">
+      <view class="title">请假开始时间</view>
+      <picker mode="date" value="{{leaveStart}}" start="2019-09-01" end="2020-10-10" bindchange="startDateChange">
+        <view class="picker">
+          {{leaveStart}}
+        </view>
+      </picker>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">请假结束时间</view>
+      <picker mode="date" value="{{leaveEnd}}" start="2019-09-01" end="2020-10-10" bindchange="endDateChange">
+        <view class="picker">
+          {{leaveEnd}}
+        </view>
+      </picker>
+    </view>
+    <view class="reason">
+      <view class="title">请假原因</view>
+      <view class="cu-form-group text-grey">
+        <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+      </view>
+    </view>
+  </block>
+
+  <!-- 放弃入学资格 -->
+  <block wx:else>
+    <view class="reason">
+      <view class="title">放弃原因</view>
+      <view class="cu-form-group text-grey">
+        <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+      </view>
+    </view>
+  </block>
+  <view class="btn-area">
+    <view class="btn margin-tb-sm text-center">
+      <button formType="submit" class="cu-btn round bg-red">提交</button>
+    </view>
+    <view class="margin-tb-sm text-center">
+      <button formType="reset" class="cu-btn round bg-blue">重置</button>
+    </view>
+  </view>
+
+</form>

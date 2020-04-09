@@ -1,0 +1,38 @@
+<!--pages/wall/publish/publish.wxml-->
+
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">发布动态</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="header">
+    <image src="{{userInfo.avatarUrl}}"></image>
+    <text>:</text>
+  </view>
+  <!-- 动态内容 -->
+  <view class="content">
+    <view class="cu-form-group">
+      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+    </view>
+  </view>
+
+  <!-- 图片 -->
+  <view class="img-box">
+    <view class="cu-form-group">
+      <view class="grid col-4 grid-square flex-sub">
+        <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
+          <image src='{{imgList[index]}}' mode='aspectFill'></image>
+          <view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+        <view class="solids" bindtap="ChooseImage" wx:if="{{imgList.length<4}}">
+          <text class="cuIcon-cameraadd"></text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

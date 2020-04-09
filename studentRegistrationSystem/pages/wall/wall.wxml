@@ -32,4 +32,10 @@
       </view>
     </view>
   </view>
+  <view class="btn-box">
+    <button class="btn" role="button" aria-disabled="false" bindtap="gotoPublish">
+      <text>发布</text>
+    </button>
+  </view>
+
 </view>

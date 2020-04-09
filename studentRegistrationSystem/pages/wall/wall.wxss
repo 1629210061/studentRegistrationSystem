@@ -1,5 +1,31 @@
 /* pages/wall/wall.wxss */
-.cu-card{
+
+.cu-card {
   background-color: white;
   margin-bottom: 10px;
+}
+
+/* 按钮 */
+
+button:not([size='mini']) {
+  width: 80px;
+}
+
+.btn-box {
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  bottom: 53px;
+}
+
+.btn {
+  border-radius: 30px;
+  height: 40px;
+  background-color: rgba(75, 164, 206, 0.603);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: normal !important;
+  color: white;
 }

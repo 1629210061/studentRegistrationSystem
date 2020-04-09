@@ -13,7 +13,8 @@
     "pages/home/register/register",
     "pages/home/schoolIntroduce/article/article",
     "pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce",
-    "pages/home/schoolIntroduce/campusScenery/campusScenery"
+    "pages/home/schoolIntroduce/campusScenery/campusScenery",
+    "pages/wall/publish/publish"
   ],
   "window": {
     "backgroundTextStyle": "light",
