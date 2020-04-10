@@ -1,4 +1,7 @@
 // pages/home/home.js
+
+const app = getApp()
+
 Component({
   options: {
     addGlobalClass: true,
@@ -7,6 +10,7 @@ Component({
    * 页面的初始数据
    */
   data: {
+    news:[],
     cardCur: 0,
     // 轮播图
     swiperList: [{
@@ -56,6 +60,7 @@ Component({
   lifetimes: {
     attached: function() {
       // 在组件实例进入页面节点树时执行
+      this.getNews()
     },
     detached: function() {
       // 在组件实例被从页面节点树移除时执行
@@ -75,12 +80,30 @@ Component({
       })
     },
     // icon页面跳转
-    gotoJump(e){
+    gotoJump(e) {
       var id = e.currentTarget.dataset.id
       console.log(id)
-      wx:wx.navigateTo({
+      wx: wx.navigateTo({
         url: this.data.iconList[id].route,
-        
+      })
+    },
+    // 发送请求新闻内容
+    getNews() {
+      var that = this
+      wx.request({
+        url: app.globalData.request_url + '/news/findAll',
+        header: {
+          'content-type': 'application/json'
+        },
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res) {
+          that.setData({
+            news: res.data,
+          })
+          console.log(that.data.news)
+        },
       })
     }
 
