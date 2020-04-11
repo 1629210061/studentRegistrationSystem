@@ -14,7 +14,7 @@
   <!-- 动态内容 -->
   <view class="content">
     <view class="cu-form-group">
-      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="多行文本输入框"></textarea>
+      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindblur="contentInput" placeholder="发表你的想法吧..."></textarea>
     </view>
   </view>
 
@@ -33,6 +33,10 @@
         </view>
       </view>
     </view>
+  </view>
+
+  <view class="btn-box">
+    <button bindtap="publish">发布</button>
   </view>
 
 </view>

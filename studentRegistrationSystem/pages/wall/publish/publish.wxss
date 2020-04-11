@@ -19,3 +19,23 @@
   height: 10em;
 }
 
+
+/* 发布按钮 */
+.btn-box{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-box button{
+  width: 100px!important;
+  border-radius: 20px;
+  background-color: rgb(168, 210, 230);
+  text-align: center;
+
+  color: white;
+  font-weight: 300!important;
+}
+
+

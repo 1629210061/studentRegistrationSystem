@@ -33,28 +33,7 @@
       </view>
     </view>
     <view class="content">
-      <text class="text-gray"> [BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
-textarea层级太高的问题？
-textarea三星S6 调用完成一行背景只显示一半
-小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
-在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
-textarea层级太高的问题？
-textarea三星S6 调用完成一行背景只显示一半
-小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
-在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
-textarea层级太高的问题？
-textarea三星S6 调用完成一行背景只显示一半
-小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
-在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
-textarea层级太高的问题？
-textarea三星S6 调用完成一行背景只显示一半
-小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
-在ios机上，textarea组件点击聚焦后光标自动往上移？[BUG]textarea在调试基础库2.10.0初始化内容时内容显示问题
-textarea层级太高的问题？
-textarea三星S6 调用完成一行背景只显示一半
-小程序目前是在灰度textarea同层渲染吗？我来反馈一个bug
-在ios机上，textarea组件点击聚焦后光标自动往上移？
-    </text>
+      <text class="text-gray"> {{content}}</text>
     </view>
   </view>
 </view>

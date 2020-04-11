@@ -10,7 +10,8 @@ Page({
   data: {
     imgList: [],
     index: null,
-    userInfo: '',
+    userInfo: null,
+    content:''
   },
 
   /**
@@ -21,13 +22,14 @@ Page({
       userInfo: app.globalData.userInfo
     })
   },
-  // 添加图片
+  // 预览图片
   ViewImage(e) {
     wx.previewImage({
       urls: this.data.imgList,
       current: e.currentTarget.dataset.url
     });
   },
+  // 添加图片
   ChooseImage() {
     wx.chooseImage({
       count: 4, //默认9
@@ -46,6 +48,7 @@ Page({
       }
     });
   },
+  // 删除图片
   DelImg(e) {
     wx.showModal({
       title: '删除图片',
@@ -59,7 +62,38 @@ Page({
             imgList: this.data.imgList
           })
         }
+
       }
     })
   },
+  // 动态内容
+  contentInput(e){
+    this.setData({
+      content:e.detail.value
+    })
+  },
+  // 发布动态
+  publish(){
+    wx.request({
+      url: app.globalData.request_url +'/dynamic/insertDynamic',
+      data: {
+        openId:app.globalData.openId,
+        content:this.data.content,
+        imageUrl: JSON.stringify(this.data.imgList )
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
+      },
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        console.log(res.data)
+        wx.navigateTo({
+          url: '/pages/wall/wall',       
+        })
+      },
+        
+    })
+  }
 })

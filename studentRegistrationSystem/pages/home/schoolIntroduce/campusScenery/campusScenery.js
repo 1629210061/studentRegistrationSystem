@@ -1,24 +1,46 @@
 // pages/home/schoolIntroduce/campusScenery/campusScenery.js
+
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    imageList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCampusScenery()
   },
   // 图片放大预览
-  previewImage(){
-    wx:wx.previewImage({
-      current: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg',
-      urls: ['https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586331140833&di=8f349e5840c2b4cb72f795cf52133f4e&imgtype=0&src=http%3A%2F%2Fpic.baike.soso.com%2Fp%2F20131029%2F20131029092759-1176572706.jpg',],
+  previewImage(e){
+    var index = e.currentTarget.dataset.index
+    wx.previewImage({
+      current: this.data.imageList[index],
+      urls: this.data.imageList,
+    })
+  },
+  // 获取图片
+  getCampusScenery(){
+    var that = this
+    wx.request({
+      url: app.globalData.request_url +'/school/findCampusScenery',
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        console.log(res.data)
+        that.setData({
+          imageList:res.data.content.split(",")
+        })
+      },
     })
   }
 })

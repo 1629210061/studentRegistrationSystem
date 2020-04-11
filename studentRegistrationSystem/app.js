@@ -25,8 +25,7 @@ App({
           },
           method: 'GET',
           success: function(res) {
-            that.globalData.openId = res.data
-
+            that.globalData.openId = res.data.openid
 
             // 获取用户信息
             wx.getSetting({

@@ -1,10 +1,14 @@
 // pages/home/schoolIntroduce/article/article.js
+
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    content:null
   },
 
 
@@ -12,55 +16,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var id = options.id
+    if(id==0){
+      this.getSchoolIntroduce()
+    }else{
+      this.getFacultyIntroduce()
+    }
+    
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 获取学校简介
+  getSchoolIntroduce(){
+    var that = this
+    wx.request({
+      url: app.globalData.request_url +'/school/findSchoolIntroduce',
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        that.setData({
+          content:res.data.content,
+          title:res.data.title
+        })
+      },
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getFacultyIntroduce(){
+    var that = this
+    wx.request({
+      url: app.globalData.request_url + '/school/findLeader',
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function (res) {
+        that.setData({
+          content: res.data.content,
+          title:res.data.title
+        })
+      },
+    })
   }
 })

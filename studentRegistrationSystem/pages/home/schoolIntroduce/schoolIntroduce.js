@@ -9,12 +9,12 @@ Page({
         id:0,
         title: '学校简介',
         image: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2023704797,448668337&fm=26&gp=0.jpg',
-        route: '/pages/home/schoolIntroduce/article/article'
+        route: '/pages/home/schoolIntroduce/article/article?id=0'
       }, {
         id: 1,
         title: '学校领导',
         image: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=969032563,99986776&fm=26&gp=0.jpg',
-        route: ''
+        route: '/pages/home/schoolIntroduce/article/article?id=1'
       },
       {
         id:2,
