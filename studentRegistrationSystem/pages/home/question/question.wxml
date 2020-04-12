@@ -7,14 +7,18 @@
 
 <view class="container">
   <scroll-view scroll-y="true" class="question-box">
-    <view class="question-item" bindtap="showModal" data-target="Modal">
-      <text class="cuIcon-title"></text>
-      <text>问题1</text>
-    </view>  
+    <block wx:for="{{questionList}}" wx:key="{{item.id}}">
+      <view class="question-item" bindtap="showModal" data-id="{{item.id}}" data-target="Modal">
+        <text class="cuIcon-title"></text>
+        <text>{{item.question}}</text>
+      </view>
+    </block>
   </scroll-view>
   <view class="service">
-    <text class="cuIcon-service"></text>
-    <text>人工客服</text>
+    <button class="cs_button" open-type="contact" session-from="weapp">
+      <text class="cuIcon-service"></text>
+      <text>人工客服</text>
+    </button>
   </view>
 </view>
 
@@ -22,13 +26,13 @@
 <view class="cu-modal {{modalName=='Modal'?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white justify-end">
-      <view class="content">Modal标题</view>
+      <view class="content">回答</view>
       <view class="action" bindtap="hideModal">
         <text class="cuIcon-close text-red"></text>
       </view>
     </view>
     <view class="padding-xl">
-      Modal 内容。
+      {{answer}}
     </view>
   </view>
 </view>

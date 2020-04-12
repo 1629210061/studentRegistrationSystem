@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.service button{
+  font-weight: 200!important;
+}
+
 .service text {
   font-size: 16px;
 }

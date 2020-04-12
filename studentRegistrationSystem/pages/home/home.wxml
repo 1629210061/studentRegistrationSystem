@@ -35,7 +35,7 @@
       </view>
     </view>
     <block wx:for="{{news}}" wx:key="{{item.id}}">
-      <view class="new-item cu-card article ">
+      <view class="new-item cu-card article " bindtap="newsDetail" data-id="{{item.id}}">
         <view class="cu-item shadow">
           <view class="title">
             <view class="text-cut">{{item.title}}</view>

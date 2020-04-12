@@ -14,7 +14,9 @@
     "pages/home/schoolIntroduce/article/article",
     "pages/home/schoolIntroduce/facultyIntroduce/facultyIntroduce",
     "pages/home/schoolIntroduce/campusScenery/campusScenery",
-    "pages/wall/publish/publish"
+    "pages/wall/publish/publish",
+    "pages/home/newsDetail/newsDetail",
+    "pages/home/guide/guideDetail/guideDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

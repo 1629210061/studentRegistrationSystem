@@ -105,6 +105,13 @@ Component({
           console.log(that.data.news)
         },
       })
+    },
+    // 进入新闻详情
+    newsDetail(e){
+      var id = e.currentTarget.dataset.id
+      wx.navigateTo({
+        url: '/pages/home/newsDetail/newsDetail?id='+id,
+      })
     }
 
   }

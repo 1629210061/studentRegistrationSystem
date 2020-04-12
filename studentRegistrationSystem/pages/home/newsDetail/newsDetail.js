@@ -1,4 +1,4 @@
-// pages/home/guide/guide.js
+// pages/home/newsDetail/newsDetail.js
 
 const app = getApp()
 
@@ -15,29 +15,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getGuideList()
+    var id = options.id
+    this.getNewsDetail(id)
   },
 
-  getGuideList(){
+  getNewsDetail(id){
     var that = this
     wx.request({
-      url: app.globalData.request_url +'/guide/findAllGuide',
-      data: '',
+      url: app.globalData.request_url +'/news/findNewsById',
+      data: {
+        id:id
+      },
       header: {},
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
       success: function(res) {
         that.setData({
-          guideList:res.data
+          news:res.data
         })
       },
-    })
-  },
-  guideDetail(e){
-    var id = e.currentTarget.dataset.id
-    wx.navigateTo({
-      url: '/pages/home/guide/guideDetail/guideDetail?id='+id,
+
     })
   }
 })

@@ -1,0 +1,30 @@
+/* pages/home/newsDetail/newsDetail.wxss */
+.container{
+  background-color: white
+}
+.header{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.info{
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+  color: rgb(190, 190, 190);
+  border-top: 1px dashed #eee;
+  border-bottom: 1px dashed #eee;
+  text-align: center;
+  padding: 0px 10px;
+}
+
+.content{
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  color: rgb(122, 120, 120)
+}
+

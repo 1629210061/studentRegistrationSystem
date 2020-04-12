@@ -1,0 +1,23 @@
+/* pages/home/guide/guideDetail/guideDetail.wxss */
+.container{
+  background-color: white
+}
+.header{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.container .content{
+  padding: 15px 25px;
+  line-height: 30px;
+  font-size: 15px;
+  color: rgb(122, 120, 120)
+}
+
+.content image{
+  margin-bottom: 15px;
+  
+}

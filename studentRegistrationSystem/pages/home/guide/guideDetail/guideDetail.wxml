@@ -1,0 +1,24 @@
+<!--pages/home/guide/guideDetail/guideDetail.wxml-->
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">入学指南</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="header">
+    <text>{{guide.title}}</text>
+  </view>
+  <view class="content" >
+    <view class="text" wx:if="{{guide.content}}">
+      <text>{{guide.content}}</text>
+    </view>
+    <view class="image-box" >
+      <block wx:for="{{guide.imageUrl}}" wx:key>
+        <view class="image-item">
+          <image src="{{item}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

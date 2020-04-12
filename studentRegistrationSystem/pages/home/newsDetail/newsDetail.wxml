@@ -1,0 +1,20 @@
+<!--pages/home/newsDetail/newsDetail.wxml-->
+<!-- 头部导航栏 -->
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+  <view slot="content">学校新闻</view>
+  <view slot="backText">返回</view>
+</cu-custom>
+
+<view class="container">
+  <view class="header">
+    <text class="title">{{news.title}}</text>
+  </view>
+  <view class="info">
+    <text>作者:{{news.author}}</text>
+    <text>来源:{{news.source}}</text>
+    <text>发布日期:{{news.updateTime}}</text>
+  </view>
+  <view class="content">
+    {{news.content}}
+  </view>
+</view>

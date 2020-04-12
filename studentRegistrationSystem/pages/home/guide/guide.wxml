@@ -7,10 +7,11 @@
 </cu-custom>
 
 <view class="container">
-  <!-- <block wx:for="" wx:key> -->
-    <view class="card-item">
-      <text>入学指南</text>
-      <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2219584996,1890523664&fm=26&gp=0.jpg"></image>
+
+  <block wx:for="{{guideList}}" wx:key="{{item.id}}">
+    <view class="card-item" bindtap="guideDetail" data-id="{{item.id}}">
+      <text>{{item.title}}</text>
+      <image src="{{item.coverUrl}}"></image>
     </view>
-  <!-- </block> -->
+  </block>
 </view>
