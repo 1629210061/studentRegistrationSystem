@@ -11,32 +11,62 @@
     <view class="school-item">
       <text class="cuIcon-home"></text>
       <text class="title">学校</text>
+       <text></text>
       <text>台州学院</text>
     </view>
     <view class="school-item">
       <text class="cuIcon-cascades"></text>
       <text class="title">学院</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="faculty" data-value="{{studentInfo.faculty}}"  class="cuIcon-edit"></text>
+      <text>{{studentInfo.faculty}}</text>
+
     </view>
     <view class="school-item">
       <text class="cuIcon-qrcode"></text>
       <text class="title">专业</text>
-      <text>台州学院</text>
+      <text bindtap="edit"  data-target="DialogModal1" data-id="major" data-value="{{studentInfo.major}}"  class="cuIcon-edit"></text>
+      <text>{{studentInfo.major}}</text>
+
     </view>
     <view class="school-item">
       <text class="cuIcon-form"></text>
       <text class="title">班级</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-value="{{studentInfo.className}}" data-id="className"  class="cuIcon-edit"></text>
+      <text>{{studentInfo.className}}</text>
     </view>
     <view class="school-item">
       <text class="cuIcon-people"></text>
       <text class="title">辅导员</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-value="{{studentInfo.instructor}}" data-id="instructor" class="cuIcon-edit"></text>
+      <text>{{studentInfo.instructor}}</text>
     </view>
     <view class="school-item">
       <text class="cuIcon-peoplelist"></text>
       <text class="title">班主任</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-value="{{studentInfo.headmaster}}" data-id="headmaster" class="cuIcon-edit"></text>
+      <text >{{studentInfo.headmaster}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 模态框 -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">修改</view>
+      <view class="action" bindtap="cancel">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <input type="text" value="{{value}}" bindblur="inputChange"></input>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="cancel">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="submit">确定</button>
+
+      </view>
     </view>
   </view>
 </view>

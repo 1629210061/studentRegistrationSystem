@@ -12,38 +12,67 @@
     <view class="personal-item">
       <text class="iconfont iconnamecard"></text>
       <text class="title">真实姓名</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="realName" data-value="{{studentInfo.realName}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.realName}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconaccount-fill"></text>
       <text class="title">性别</text>
-      <text>女</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="gender" data-value="{{studentInfo.gender}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.gender}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconproduct1"></text>
       <text class="title">年龄</text>
-      <text>女</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="age" data-value="{{studentInfo.age}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.age}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconcreditcard"></text>
       <text class="title">学号</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="studentId" data-value="{{studentInfo.studentId}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.studentId}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconmap1"></text>
       <text class="title">籍贯</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="nativePlace" data-value="{{studentInfo.nativePlace}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.nativePlace}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconmap1"></text>
       <text class="title">寝室</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="dormitory" data-value="{{studentInfo.dormitory}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.dormitory}}</text>
     </view>
     <view class="personal-item">
       <text class="iconfont iconphone1"></text>
       <text class="title">手机号</text>
-      <text>台州学院</text>
+      <text bindtap="edit" data-target="DialogModal1" data-id="phone" data-value="{{studentInfo.phone}}" class="cuIcon-edit"></text>
+      <text>{{studentInfo.phone}}</text>
     </view>
 
+  </view>
+</view>
+
+<!-- 模态框 -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">修改</view>
+      <view class="action" bindtap="cancel">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <input type="text" value="{{value}}" bindblur="inputChange"></input>
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="cancel">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="submit">确定</button>
+
+      </view>
+    </view>
   </view>
 </view>

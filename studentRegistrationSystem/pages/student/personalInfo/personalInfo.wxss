@@ -26,8 +26,25 @@
   color: black;
 }
 
-.personal-item text:nth-child(3){
+.personal-item text:nth-child(4){
   float: right;
   margin-right: 5px;
 }
+
+.cuIcon-edit{
+  float: right;
+  color: #5db4e7;
+}
+
+
+button:not([size='mini']){
+  width: 60px!important;
+  margin-right: 10px!important;
+}
+.padding-xl input{
+  border: 1px solid rgb(122, 119, 119);
+  border-radius: 5px;
+
+}
+
 
