@@ -10,7 +10,7 @@ Component({
    * 页面的初始数据
    */
   data: {
-    news:[],
+    news: [],
     cardCur: 0,
     // 轮播图
     swiperList: [{
@@ -107,13 +107,39 @@ Component({
       })
     },
     // 进入新闻详情
-    newsDetail(e){
+    newsDetail(e) {
       var id = e.currentTarget.dataset.id
       wx.navigateTo({
-        url: '/pages/home/newsDetail/newsDetail?id='+id,
+        url: '/pages/home/newsDetail/newsDetail?id=' + id,
+      })
+    },
+    // 地图导航
+    gotomap() {
+      var that = this
+      wx.chooseLocation({
+        success: function(res) {
+          console.log(res)
+          that.setData({
+            latitude: res.latitude,
+            longitude: res.longitude,
+            name: res.name
+          })
+          wx.openLocation({
+            latitude: res.latitude,
+            longitude: res.longitude,
+            scale: 18,
+            name: res.name,
+            address: res.address
+          })
+        },
+        fail: function(res) {
+          // console.log(res)
+        },
+        complete: function(res) {
+          // console.log(res)
+        },
       })
     }
-
   }
 
 })

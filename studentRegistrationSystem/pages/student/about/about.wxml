@@ -2,6 +2,17 @@
 
 <!-- 头部导航栏 -->
 <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
-  <view slot="content">我的</view>
+  <view slot="content">关于软件</view>
   <view slot="backText">返回</view>
 </cu-custom>
+
+<view class="container">
+  <view class="introduce">
+    <text>这是一款用于高校生进行预报的系统，方便新生进行预报道，以及对校园信息提前进行一些相关的了解。如对该软件有疑问，请联系我们</text>
+  </view>
+  <view class="info">
+    <text>作者：鲍作涛</text>
+    <text>联系电话：1111111111</text>
+    <text>版本号：1.0.0</text>
+  </view>
+</view>

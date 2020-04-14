@@ -2,7 +2,7 @@
 
 <home wx:if="{{PageCur=='home'}}"></home>
 <student wx:if="{{PageCur=='student'}}"></student>
-<wall wx:if="{{PageCur=='wall'}}"></wall>
+<wall wx:if="{{PageCur=='wall'}}" id="wall"></wall>
 <!-- 底部导航栏 -->
 <view class="footer">
   <view class="cu-bar tabbar bg-white shadow foot">

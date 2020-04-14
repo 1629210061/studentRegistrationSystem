@@ -11,13 +11,13 @@ Page({
     imgList: [],
     index: null,
     userInfo: null,
-    content:''
+    content: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.setData({
       userInfo: app.globalData.userInfo
     })
@@ -67,33 +67,46 @@ Page({
     })
   },
   // 动态内容
-  contentInput(e){
+  contentInput(e) {
     this.setData({
-      content:e.detail.value
+      content: e.detail.value
     })
+    console.log(e.detail.value)
   },
   // 发布动态
-  publish(){
+  publish() {
     wx.request({
-      url: app.globalData.request_url +'/dynamic/insertDynamic',
+      url: app.globalData.request_url + '/dynamic/insertDynamic',
       data: {
-        openId:app.globalData.openId,
-        content:this.data.content,
-        imageUrl: JSON.stringify(this.data.imgList )
+        openId: app.globalData.openId,
+        content: this.data.content,
+        imageUrl: JSON.stringify(this.data.imgList)
       },
       header: {
-        'content-type': 'application/x-www-form-urlencoded;charset=utf-8' 
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8'
       },
       method: 'POST',
       dataType: 'json',
       responseType: 'text',
       success: function(res) {
-        console.log(res.data)
-        wx.navigateTo({
-          url: '/pages/wall/wall',       
+        wx.showToast({
+          title: '发布成功',
+          icon: 'none',
+          duration: 10000,
         })
+        var pages = getCurrentPages();
+        var prevPage = pages[pages.length - 2]; //上一个页面
+        //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+        console.log(prevPage)
+        prevPage.setData({
+          PageCur: 'wall'
+        })
+        wx.navigateBack({ //返回
+          delta: 1
+        })
+
       },
-        
+
     })
   }
 })

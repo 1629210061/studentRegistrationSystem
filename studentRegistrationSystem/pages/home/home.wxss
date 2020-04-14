@@ -1,5 +1,8 @@
 /* pages/home/home.wxss */
 
+.container{
+  margin-bottom: 50px;
+}
 /* 轮播图模块 */
 
 .swiper {
@@ -44,22 +47,45 @@
   color: #8799a3;
 }
 
+/* 地图导航 */
+
+.map-box {
+  height: 80px;
+  width: 100%;
+  margin-top: 10px;
+  background: url('http://img5.imgtn.bdimg.com/it/u=1429740739,2266992226&fm=26&gp=0.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.map-box text{
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+}
 
 /* 学校新闻 */
+
 .cu-card>.cu-item {
-  margin: 0px!important;
-  border-radius: 0rpx!important;
-
+  margin: 0px !important;
+  border-radius: 0rpx !important;
 }
 
-.text-content{
-  height: 6em!important;
+.text-content {
+  height: 6em !important;
 }
 
-.newsList{
+.newsList {
   margin-top: 10px;
 }
 
-.new-title{
+.new-title {
   border-bottom: 1px solid #eee;
+}
+
+.new-item{
+   border-bottom: 1px solid #eee;
 }

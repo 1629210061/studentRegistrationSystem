@@ -6,6 +6,11 @@ Page({
   data: {
     PageCur: 'home',
   },
+  onLoad(options){
+  },
+  onShow(){
+
+  },
   NavChange(e) {
     this.setData({
       PageCur: e.currentTarget.dataset.cur

@@ -18,12 +18,18 @@ Component({
 
   lifetimes: {
     attached: function() {
-      // 在组件实例进入页面节点树时执行
+      //在组件在视图层布局完成后执行
       this.getDynamicList()
     },
-    detached: function() {
-      // 在组件实例被从页面节点树移除时执行
+
+  },
+  pageLifetimes: {
+    show: function () {
+      // 页面被展示
+
+      this.getDynamicList()
     },
+
   },
 
   /**

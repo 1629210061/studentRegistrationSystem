@@ -11,7 +11,7 @@
 /* 按钮 */
 
 button:not([size='mini']) {
-  width: 80px;
+  width: 80px!important;
 }
 
 .btn-box {

@@ -96,7 +96,18 @@ Page({
     } else {
       this.giveUpRegister(info)
     }
+    wx.showToast({
+      title: '注册成功',
+      icon: 'none',
+      duration: 10000,
+      mask: true,
+      success: function(res) {
+        wx.navigateTo({
+          url: '/pages/index/index',
+        })
+      },
 
+    })
   },
   getSutudentInfo() {
     var that = this

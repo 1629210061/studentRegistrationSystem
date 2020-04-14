@@ -55,3 +55,9 @@
 .card-item .cuIcon-right{
   float: right;
 }
+
+.info-box button{
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+}

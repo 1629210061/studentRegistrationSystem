@@ -22,7 +22,10 @@
       </view>
     </block>
   </view>
-
+  <!-- 地图导航 -->
+  <view class="map-box" bindtap="gotomap">
+    <text >地图导航</text>
+  </view>
   <!-- 学校新闻 -->
   <view class="newsList">
     <!-- 标题 -->

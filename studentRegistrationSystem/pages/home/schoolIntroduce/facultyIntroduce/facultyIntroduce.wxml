@@ -8,13 +8,13 @@
   <view class="cu-bar search bg-white">
     <view class="search-form round">
       <text class="cuIcon-search"></text>
-      <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search" bindblur="search"></input>
+      <input type="text" placeholder="搜索学院..." confirm-type="search" bindblur="search"></input>
     </view>
     <view class="action">
       <view class="section">
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{facultyList}}">
           <view class="picker">
-            {{facultyList[index]}}
+            {{faculty.title?faculty.title:facultyList[index]}}
           </view>
         </picker>
       </view>
@@ -27,13 +27,13 @@
     <view class="header">
       <view class="cu-bar bg-white">
         <view class="action border-title">
-          <text class="text-xl text-bold"> {{facultyList[index]}}</text>
+          <text class="text-xl text-bold"> {{faculty.title}}</text>
           <text class="bg-grey" style="width:2rem"></text>
         </view>
       </view>
     </view>
     <view class="content">
-      <text class="text-gray"> {{content}}</text>
+      <text class="text-gray"> {{faculty.content}}</text>
     </view>
   </view>
 </view>

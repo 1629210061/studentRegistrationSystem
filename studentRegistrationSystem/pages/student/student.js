@@ -12,7 +12,7 @@ Component({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: true,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     isRequest: false
   },
 
@@ -20,7 +20,6 @@ Component({
     attached: function() {
       // 在组件实例进入页面节点树时执行
       // 获取用户信息
-      console.log(app.globalData.userInfo)
       if (app.globalData.userInfo) {
         this.setData({
           userInfo: app.globalData.userInfo,
@@ -34,7 +33,6 @@ Component({
             userInfo: res.userInfo,
             hasUserInfo: true
           })
-
         }
       } else {
         // 在没有 open-type=getUserInfo 版本的兼容处理
@@ -49,6 +47,7 @@ Component({
           }
         })
       }
+
     },
 
   },
@@ -60,6 +59,35 @@ Component({
         url: e.currentTarget.dataset.route,
       })
     },
+    // 获取用户信息
+    getUserInfo: function (e) {
+      app.globalData.userInfo = e.detail.userInfo
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+      this.postUserInfo(this.data.userInfo)
+    },
+    // 发送用户信息
+    postUserInfo(userInfo) {
+      console.log(userInfo)
+      var that = this
+      wx.request({
+        url: app.globalData.request_url + '/student/addStudent',
+        data: {
+          nickname: userInfo.nickName,
+          avatarUrl: userInfo.avatarUrl,
+          openId: app.globalData.openId
+        },
+        header: {
+          'content-type': 'application/json'
+        },
+        method: 'GET',
+        success: function (res) {
+          that.data.isRequest = true
+        },
+      })
+    }
 
 
   }

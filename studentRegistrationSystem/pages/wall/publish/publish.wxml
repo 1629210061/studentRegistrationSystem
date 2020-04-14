@@ -14,7 +14,7 @@
   <!-- 动态内容 -->
   <view class="content">
     <view class="cu-form-group">
-      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindblur="contentInput" placeholder="发表你的想法吧..."></textarea>
+      <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="contentInput" placeholder="发表你的想法吧..."></textarea>
     </view>
   </view>
 

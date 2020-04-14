@@ -26,7 +26,6 @@ App({
           method: 'GET',
           success: function(res) {
             that.globalData.openId = res.data.openid
-
             // 获取用户信息
             wx.getSetting({
               success: res => {
@@ -42,8 +41,6 @@ App({
                       if (that.userInfoReadyCallback) {
                         that.userInfoReadyCallback(res)
                       }
-                      that.postUserInfo(res.userInfo)
-
                     }
                   })
                 }
@@ -66,26 +63,7 @@ App({
   data: {
     isRequest: false
   },
-  // 发送用户信息
-  postUserInfo(userInfo) {
-    console.log(userInfo)
-    var that = this
-    wx.request({
-      url: this.globalData.request_url + '/student/addStudent',
-      data: {
-        nickname: userInfo.nickName,
-        avatarUrl: userInfo.avatarUrl,
-        openId: this.globalData.openId
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      method: 'GET',
-      success: function(res) {
-        that.data.isRequest = true
-      },
-    })
-  }
+
 
 
 })

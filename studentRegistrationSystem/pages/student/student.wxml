@@ -8,6 +8,7 @@
   <!-- 头部信息框 -->
   <view class="head">
     <view class="info-box">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
       <image src='{{userInfo.avatarUrl}}'></image>
       <text>{{userInfo.nickName}}</text>
     </view>

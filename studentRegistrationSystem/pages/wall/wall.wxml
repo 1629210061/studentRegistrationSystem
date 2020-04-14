@@ -1,7 +1,7 @@
 <!--pages/wall/wall.wxml-->
 <!-- 头部导航栏 -->
 <cu-custom bgColor="bg-gradual-pink">
-  <view slot="content">我的</view>
+  <view slot="content">台院墙</view>
 </cu-custom>
 
 <view class="container">
