@@ -51,6 +51,12 @@
       <text bindtap="edit" data-target="DialogModal1" data-id="phone" data-value="{{studentInfo.phone}}" class="cuIcon-edit"></text>
       <text>{{studentInfo.phone}}</text>
     </view>
+    <view class="personal-item">
+      <text class="iconfont iconall1"></text>
+      <text class="title">预报到</text>
+      <text ></text>
+      <text>{{studentInfo.registerState}}</text>
+    </view>
 
   </view>
 </view>
